@@ -1,0 +1,96 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: lightgrey;    
+}
+
+#mapAndContactContainer {
+    display: flex;
+    margin: 15px;
+    background-color: rgb(143, 27, 27);
+    /* border: 2px pink solid; */
+}
+
+#mapContainer {
+    flex: 0 0 450px;
+    margin: 15px 0px 10px 15px;
+    /* border: 2px purple solid; */
+}
+
+#contactInfoContainer {
+    color: white;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* border: 2px green solid; */
+
+}
+
+#scheduleTour {
+    border-radius: 5px;
+}
+
+.brewerContainer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.brewerCard {
+    padding: 0;
+}
+
+.brewerPhoto {
+    width: 85%;
+    align-self: center;
+    margin-top: 10px;
+}
+
+#brewerTitleContainer {
+    justify-content: center;
+    text-align: center;
+}
+
+#meetTheBrewersTitle {
+    font-size: 3em;
+}
+
+/* relevant styles */
+.brewerPhotoAndDescriptionWrap {
+    position: relative;
+}
+
+.brewerDescriptionWrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(117, 132, 146, 0.72);
+    color: #fff;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .2s, visibility .2s;
+}
+
+.brewerPhotoAndDescriptionWrap:hover .brewerDescriptionWrap {
+    visibility: visible;
+    opacity: 1;
+}
+  
+.brewerDescription {
+    transition: .2s;
+    transform: translateY(1em);
+}
+  
+.brewerPhotoAndDescriptionWrap:hover .brewerDescription {
+    transform: translateY(0);
+}
